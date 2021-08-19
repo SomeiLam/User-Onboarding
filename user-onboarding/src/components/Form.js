@@ -5,7 +5,7 @@ const StyledForm = styled.div`
     width: 50%;
     margin: 0 auto;
     border: 3px dotted #7DA2A9;
-    border-radius: 10%;
+    s
 
     .errors {
         color: red;
@@ -81,11 +81,11 @@ export default function Form(props) {
                     <h2>Create an User</h2>
 
                     <div className='errors'>
-                        <div>{errors.first_name}</div>
-                        <div>{errors.last_name}</div>
-                        <div>{errors.email}</div>
-                        <div>{errors.password}</div>
-                        <div>{errors.terms}</div>
+                        <div id="firstNameError">{errors.first_name}</div>
+                        <div id="lastNameError">{errors.last_name}</div>
+                        <div id="emailError">{errors.email}</div>
+                        <div id="passwordError">{errors.password}</div>
+                        <div id="termsError">{errors.terms}</div>
                     </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function Form(props) {
                     </label>
                 </div>
                 <div className="submit">
-                    <button disabled={disabled}>submit</button>
+                    <button disabled={disabled} id="submitBtn">submit</button>
                 </div>
             </form>
         </StyledForm>
